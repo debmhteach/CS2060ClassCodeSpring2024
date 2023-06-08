@@ -49,9 +49,12 @@ void guessGame(void) {
 // isCorrect returns true if guess equals answer
 // if guess does not equal answer, displays hint
 bool isCorrect(int guess, int answer) {
+
+    bool correct = false;
+
    // guess is correct
    if (guess == answer) {
-      return true;
+      correct = true;
    }
 
    // guess is incorrect; display hint
@@ -62,7 +65,7 @@ bool isCorrect(int guess, int answer) {
       printf( "%s", "Too high. Try again.\n? " );
    }
 
-   return false;
+   return correct;
 } // end function isCorrect
 
 
