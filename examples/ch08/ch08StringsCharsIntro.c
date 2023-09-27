@@ -80,12 +80,12 @@ void exploreStringCharArray(void)
 	printf("*string4Ptr = %s\n\n", string4Ptr); 
 
 
-	printf("string1[] sizeof     = %llu\n", sizeof(string1));
-	printf("string2a[] sizeof     = %llu\n", sizeof(string2a));
-	printf("string2b[] sizeof     = %llu\n", sizeof(string2b));
-	printf("string3[] sizeof     = %llu\n", sizeof(string3));
-	printf("*string1Ptr sizeof  = %llu\n", sizeof(*string1Ptr));
-	printf("*string3Ptr sizeof  = %llu\n", sizeof(*string3Ptr));
+	printf("string1[] sizeof     = %zu\n", sizeof(string1));
+	printf("string2a[] sizeof     = %zu\n", sizeof(string2a));
+	printf("string2b[] sizeof     = %zu\n", sizeof(string2b));
+	printf("string3[] sizeof     = %zu\n", sizeof(string3));
+	printf("*string1Ptr sizeof  = %zu\n", sizeof(*string1Ptr));
+	printf("*string3Ptr sizeof  = %zu\n", sizeof(*string3Ptr));
 
 }
 
@@ -106,7 +106,7 @@ void arrayPointerString(void)
 	const char *suitPtr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};	
 	
 	// add comment 
-	printf ("*suitPtr size_of    = %llu\n", sizeof(*suitPtr));
+	printf ("*suitPtr size_of    = %zu\n", sizeof(*suitPtr));
 	printf ("suitArray[4][9] sizeof    = %zu\n", sizeof(suitArray));
 
 	puts("\nHow do you access an array of pointers?");
@@ -153,7 +153,8 @@ void arrayPointerString(void)
 	printf("suitArray[1] = %s\n", suitArray[1]);
 
 	printf("%s", "Enter a string to put in suitPtr[0]");
-	scanf("%s", suitPtr[0]);
+    //uncomment and see what happens 
+	//scanf("%s", suitPtr[0]);
 	printf("suitPtr[0] = %s\n", suitPtr[0]);
 
 }

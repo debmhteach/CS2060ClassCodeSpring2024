@@ -25,9 +25,9 @@ int main(void)
 	sizeArr = sizeof(array);
 	sizeElem = sizeof(array[0]);
 	arrayLength = sizeof(array) / sizeof(array[0]);
-	printf("sizeof(array): %llu\n", sizeArr);
-	printf("sizeofarray[0]): %llu\n", sizeElem);
-	printf("sizeof(array) / sizeof(array[0]): %llu\n", arrayLength);
+	printf("sizeof(array): %zu\n", sizeArr);
+	printf("sizeofarray[0]): %zu\n", sizeElem);
+	printf("sizeof(array) / sizeof(array[0]): %zu\n", arrayLength);
 
 	//arrayLength = *(&array + 1) - array;
 	//printf("*(&array + 1) - array: %llu\n", arrayLength);
@@ -81,8 +81,8 @@ int main(void)
 	printf("*array2Ptr = %d\n", *array2Ptr);
 	printf("*(array2Ptr +1) = %d\n", *(array2Ptr + 1));
 	printf("*(array2Ptr -1) = %d\n", *(array2Ptr - 1));
-	printf("array2Ptr - arrayPtr = %llu\n", array2Ptr - arrayPtr);
-	printf("arrayPtr - array2Ptr = %llu\n", arrayPtr - array2Ptr);
+	printf("array2Ptr - arrayPtr = %zu\n", array2Ptr - arrayPtr);
+	printf("arrayPtr - array2Ptr = %zu\n", arrayPtr - array2Ptr);
 	puts("Error arrayPtr +array2Ptr = %d\n");
 
 
@@ -92,13 +92,13 @@ int main(void)
 	puts("array printed with:\nArray index notation");
 	for (size_t i = 0; i < SIZE; ++i)
 	{
-		printf("array[%llu] = %d\n", i, array[i]);
+		printf("array[%zu] = %d\n", i, array[i]);
 	}
 
 	puts("\nPointer offset notation");
 	for (size_t offset = 0; offset < SIZE; ++offset)
 	{
-		printf("*(array + %llu) = %d\n", offset, *(array + offset));
+		printf("*(array + %zu) = %d\n", offset, *(array + offset));
 	}
 
 	return 0;
