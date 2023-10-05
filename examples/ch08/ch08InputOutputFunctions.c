@@ -10,7 +10,7 @@
 
 // prototype
 void charTesting(char c);
-void testFgetsOverflow();
+void testFgetsOverflow(void);
 
 int main(void)
 {
@@ -35,15 +35,15 @@ int main(void)
 	// length of string entered using fgets
 	lenString = strlen(sentenceFgets);
 	sizeString = sizeof(sentenceFgets);
-	printf("The length of the string is %llu\n ", lenString);
-    printf("The size of the string is %llu\n ", sizeString);
+	printf("The length of the string is %lu\n ", lenString);
+    printf("The size of the string is %lu\n ", sizeString);
 	
 	// replacing newline character with null character 	
 	sentenceFgets[strlen(sentenceFgets) -1] = '\0';
 	lenString = strlen(sentenceFgets);
 	sizeString = sizeof(sentenceFgets);
-    printf("The length of the string after removing new line is %llu\n ", lenString);
-	printf("The size of the string after removing new line is %llu\n ", sizeString);
+    printf("The length of the string after removing new line is %lu\n ", lenString);
+	printf("The size of the string after removing new line is %lu\n ", sizeString);
 	
 
 
@@ -60,7 +60,7 @@ int main(void)
 	sentenceGetChar[i] = '\0'; // terminate string
 	
 	lenString = strlen(sentenceGetChar);
-	printf("The length of the string is %llu ", lenString);
+	printf("The length of the string is %lu ", lenString);
 	printf("The character array contains %s", sentenceGetChar);
 
 	// use puts to display sentence
@@ -93,7 +93,7 @@ int main(void)
 	return 0;
 }
 
-void testFgetsOverflow()
+void testFgetsOverflow(void)
 {
 		//test how fgets works
 		char test[5];

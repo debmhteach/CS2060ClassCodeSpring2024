@@ -16,7 +16,6 @@ void printLimits(void);
 int main(void)
 {
 	char inputStr[LENGTH]; // create char arintray
-	size_t inputLength = 0;
 
     printLimits();
 
