@@ -11,14 +11,14 @@
 
 void  exploreValidateInt(const char* buff);
 bool validateInt(char* buff, int* const validInt);
-void printLimits();
+void printLimits(void);
 
 int main(void)
 {
 	char inputStr[LENGTH]; // create char arintray
 	size_t inputLength = 0;
 
-	printLimits();
+    printLimits();
 
 	for (unsigned int counter = 1; counter < 6; counter++)
 	{
@@ -32,7 +32,7 @@ int main(void)
 
 
 
-void printLimits()
+void printLimits(void)
 {
 	printf("The number of bits in a byte %d\n", CHAR_BIT);
 

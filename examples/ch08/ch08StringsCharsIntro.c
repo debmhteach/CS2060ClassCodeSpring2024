@@ -95,6 +95,7 @@ void testStringOverflow(void)
 
 	printf("%s", "Enter a string longer than 9 characters");
 	scanf("%s", string);
+    printf("%s", string);
 
 }
 
