@@ -38,7 +38,8 @@ int main(void)
 	printf("The length of the string is %lu\n ", lenString);
     printf("The size of the string is %lu\n ", sizeString);
 	
-	// replacing newline character with null character 	
+	// replacing newline character with null character
+    //Update the following to check if newline character existws before replacing with null character
 	sentenceFgets[strlen(sentenceFgets) -1] = '\0';
 	lenString = strlen(sentenceFgets);
 	sizeString = sizeof(sentenceFgets);
