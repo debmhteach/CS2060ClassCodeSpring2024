@@ -19,7 +19,7 @@ int main(void)
 
 	//reviewChar();
 	exploreStringCharArray();
-	//arrayPointerString(); 
+	//arrayPointerString();
 
 	return 0;
 }
