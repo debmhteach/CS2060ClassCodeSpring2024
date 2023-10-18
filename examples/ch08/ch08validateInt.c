@@ -15,7 +15,7 @@ void printLimits(void);
 
 int main(void)
 {
-	char inputStr[LENGTH]; // create char arintray
+	char inputStr[LENGTH]; // create char array
 
     printLimits();
 
