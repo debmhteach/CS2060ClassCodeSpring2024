@@ -30,7 +30,6 @@ int main(void)
 	struct employee defaultEmployee;
 	puts("\n\nPart 1 declare struct employee defaultEmployee");
 
-	char stringtest[6] = { '\0'};
 
 	puts("Print after declaration defaultEmployee\n");
 
