@@ -25,12 +25,12 @@ typedef struct node
 	struct node* nextNodePtr;
 }Node;
 
-void exploreDoublePointers();
+void exploreDoublePointers(void);
 void printList(Node* listPtr);
 void insertNode(Node** headPtr, int number);
 void deleteNode(Node** headPtr, int numberToDelete);
 void freeRemainingNodes(Node** headPtr);
-char validateYesNo();
+char validateYesNo(void);
 
 
 int main(void)
@@ -244,7 +244,7 @@ void freeRemainingNodes(Node** headPtr)
 }
 
 //
-char validateYesNo() {
+char validateYesNo(void) {
 	char validYesNo;
 
 	do {
@@ -260,7 +260,7 @@ char validateYesNo() {
 } //End validateYesNo
 
 
-void exploreDoublePointers()
+void exploreDoublePointers(void)
 {
 	int n = 20;
 	int* nPtr = NULL;
