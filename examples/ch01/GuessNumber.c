@@ -36,7 +36,7 @@ void guessGame(void) {
    do {
 
       // 
-      int answer = 1 + rand() % 1000;
+      int answer = 1 + rand() % MAX;
 
       //
       printf("I have a number between %d and %d.\n", MIN, MAX);
