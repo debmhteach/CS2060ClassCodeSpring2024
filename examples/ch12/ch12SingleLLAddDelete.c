@@ -131,7 +131,7 @@ void insertNode(Node** headPtr, int number)
 			//
 			*headPtr = newNodePtr;
 		}
-		// 
+		//
 		else
 		{
 			//
