@@ -12,7 +12,7 @@
 #define MAX 1000
 
 //
-void guessGame(void); 
+void guessGame(int randomMin, int randomMax); 
 bool isCorrect(int guess, int answer); 
 
 int main(void) {
@@ -20,13 +20,13 @@ int main(void) {
    srand(time(0)); 
 
    //
-   guessGame();
+   guessGame(MIN, MAX);
 } // end main
 
 
 
 // 
-void guessGame(void) {
+void guessGame(int randomMin, int randomMax) {
     
     //
    int response =0;
@@ -36,10 +36,10 @@ void guessGame(void) {
    do {
 
       // 
-      int answer = 1 + rand() % MAX;
+      int answer = 1 + rand() % randomMin;
 
       //
-      printf("I have a number between %d and %d.\n", MIN, MAX);
+      printf("I have a number between %d and %d.\n", randomMin, randomMax);
 
       // 
       puts("Can you guess my number?\n" 
