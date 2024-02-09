@@ -17,7 +17,7 @@ void fun(int num1, int num2);
 
 //Add your own comments to explain the code
 
-int main() 
+int main(void)
 {
 
 	//initialize variables

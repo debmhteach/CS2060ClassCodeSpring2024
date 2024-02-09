@@ -23,8 +23,6 @@ int main(void) {
    guessGame(MIN, MAX);
 } // end main
 
-
-
 // 
 void guessGame(int randomMin, int randomMax) {
     
