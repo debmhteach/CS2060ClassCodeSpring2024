@@ -49,8 +49,8 @@ int main(void)
 
 	//numSpace();
 	//letterAnalysis();
-	//wordSize();
-	//wordOccurs();
+	wordSize();
+	wordOccurs();
     //memoryFunctions();
 
 }
