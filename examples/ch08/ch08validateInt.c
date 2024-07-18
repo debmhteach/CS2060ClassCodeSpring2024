@@ -16,6 +16,10 @@ void printLimits(void);
 int main(void)
 {
 	char inputStr[LENGTH]; // create char array
+    
+    //exploreValidateInt("3");
+    exploreValidateInt("3f");
+    exploreValidateInt("xx");
 
     printLimits();
 

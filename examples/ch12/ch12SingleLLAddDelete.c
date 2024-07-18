@@ -27,7 +27,7 @@ typedef struct node
 
 void exploreDoublePointers(void);
 void printList(Node* listPtr);
-void insertNode(Node** headPtr, int number);
+void insertNode(Node** headPtr);
 void deleteNode(Node** headPtr, int numberToDelete);
 void freeRemainingNodes(Node** headPtr);
 char validateYesNo(void);
@@ -47,13 +47,10 @@ int main(void)
 	//
 	do
 	{
-		//Focusing on linked lists so not validating that a number was entered
-		printf("%s", "Enter number ");
-		scanf("%d", &number);
-		while ((getchar()) != '\n');
+
 
 		// 
-		insertNode(&headNodePtr, number);
+		insertNode(&headNodePtr);
 
 		// why does insert node pass the address of head pointer but print list does not?
 		printList(headNodePtr);
@@ -98,7 +95,7 @@ int main(void)
 }
 
 // 
-void insertNode(Node** headPtr, int number)
+void insertNode(Node** headPtr)
 {
 	// 
 	Node* newNodePtr = malloc(sizeof(Node));
@@ -106,8 +103,12 @@ void insertNode(Node** headPtr, int number)
 	// 
 	if (newNodePtr != NULL)
 	{
+        //Focusing on linked lists so not validating that a number was entered
+        //initialize all data members
+        printf("%s", "Enter number ");
+        scanf("%d", &newNodePtr->data);
+        while ((getchar()) != '\n');
 		//
-		newNodePtr->data = number;
 		//
 		newNodePtr->nextNodePtr = NULL;
 
@@ -117,7 +118,7 @@ void insertNode(Node** headPtr, int number)
 		Node* currentPtr = *headPtr;
 
 		//
-		while (currentPtr != NULL && currentPtr->data <= number)
+		while (currentPtr != NULL && currentPtr->data <= newNodePtr->data)
 		{
 			//
 			previousPtr = currentPtr;
@@ -144,7 +145,7 @@ void insertNode(Node** headPtr, int number)
 	//
 	else
 	{
-		printf("No memory to create node for %d\n", number);
+		printf("No memory to create node\n");
 	}
 } // 
 
